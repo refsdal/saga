@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EDE7A716-BBC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AF8FCC79-FC86-4892-B6C3-7ABD3DFA5EC8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspire", "Aspire", "{44C3C6CC-EEEE-4F3F-AD6E-59F7E32A69BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.Host", "src\Aspire\Aspire.Host\Aspire.Host.csproj", "{D85D1283-2631-4BCA-A4AC-6DFC7F84967A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +18,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44C3C6CC-EEEE-4F3F-AD6E-59F7E32A69BF} = {EDE7A716-BBC6-440B-9D2B-43F29E0C8AEA}
+		{D85D1283-2631-4BCA-A4AC-6DFC7F84967A} = {44C3C6CC-EEEE-4F3F-AD6E-59F7E32A69BF}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D85D1283-2631-4BCA-A4AC-6DFC7F84967A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D85D1283-2631-4BCA-A4AC-6DFC7F84967A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D85D1283-2631-4BCA-A4AC-6DFC7F84967A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D85D1283-2631-4BCA-A4AC-6DFC7F84967A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
