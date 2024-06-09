@@ -9,4 +9,7 @@ var tyr = builder.AddProject<Saga_Tyr_Host>("tyr")
 var vidar = builder.AddProject<Saga_Vidar_Host>("vidar")
     .WithHttpEndpoint(10012);
 
+var gudrun = builder.AddProject<Saga_Gudrun_Host>("gudrun")
+    .WithHttpEndpoint(10013);
+
 builder.Build().Run();
