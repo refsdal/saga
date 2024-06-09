@@ -4,7 +4,8 @@ services that in turn forms the distributed platform.
 
 ## Services
 
-* [Vidar](src/Vidar/) - This service holds all the customer data for a all tenants in the platform.
+* [Tyr](src/Tyr/) - This service holds all the tenant about all tenants in the platform.
+* [Vidar](src/Vidar/) - This service holds all the customer data for all tenants in the platform.
 
 ## License
 See [LICENSE.md](license.md) for more information about the license related to the source code in this repository.
