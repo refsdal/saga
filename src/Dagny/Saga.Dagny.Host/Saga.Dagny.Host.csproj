@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsPublishable>true</IsPublishable>
+        <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+        <ContainerRepository>refsdal/saga-dagny</ContainerRepository>
+        <ContainerFamiliy>jammy-chiseled</ContainerFamiliy>
+        <PublishProfile>DefaultContainer</PublishProfile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ContainerLabel Include="org.opencontainers.image.title" Value="Dagny" />
+        <ContainerLabel Include="org.opencontainers.image.description" Value="The official image for the Saga application Dagny, the identity solution in the Saga platform" />
+        <ContainerLabel Include="org.opencontainers.image.source" Value="https://github.com/refsdal/saga" />
+        <ContainerLabel Include="org.opencontainers.image.authors" Value="Refsdal Technologies" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Saga.Dagny.Infrastructure\Saga.Dagny.Infrastructure.csproj" />
+      <ProjectReference Include="..\Saga.Dagny.Presentation\Saga.Dagny.Presentation.csproj" />
+    </ItemGroup>
+    
+</Project>

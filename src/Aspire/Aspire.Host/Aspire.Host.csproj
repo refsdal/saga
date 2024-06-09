@@ -14,6 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Dagny\Saga.Dagny.Host\Saga.Dagny.Host.csproj" />
       <ProjectReference Include="..\..\Tyr\Saga.Tyr.Host\Saga.Tyr.Host.csproj" />
       <ProjectReference Include="..\..\Vidar\Saga.Vidar.Host\Saga.Vidar.Host.csproj" />
     </ItemGroup>
