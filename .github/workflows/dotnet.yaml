@@ -26,8 +26,8 @@ jobs:
 
       - name: "💾 Setup .NET Workloads"
         run: |
-          dotnet workload update
           dotnet workload install aspire
+          dotnet workload update
 
       - name: "💾 Install GitVersion"
         uses: gittools/actions/gitversion/setup@v1.1.1
