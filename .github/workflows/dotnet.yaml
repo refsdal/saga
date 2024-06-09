@@ -26,6 +26,7 @@ jobs:
 
       - name: "💾 Setup .NET Workloads"
         run: |
+          dotnet workload update
           dotnet workload install aspire
 
       - name: "💾 Install GitVersion"
