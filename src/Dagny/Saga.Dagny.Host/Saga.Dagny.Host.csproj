@@ -11,7 +11,8 @@
         <IsPublishable>true</IsPublishable>
         <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
         <ContainerRepository>refsdal/saga-dagny</ContainerRepository>
-        <ContainerFamiliy>jammy-chiseled</ContainerFamiliy>
+        <ContainerFamily>alpine</ContainerFamily>
+        <ContainerImageTags>$(Version);latest</ContainerImageTags>
         <PublishProfile>DefaultContainer</PublishProfile>
     </PropertyGroup>
 
