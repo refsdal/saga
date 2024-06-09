@@ -32,7 +32,6 @@ jobs:
       - name: "💾 Setup .NET SDK"
         uses: actions/setup-dotnet@v4
         with:
-          cache: true
           global-json-file: global.json
 
       - name: "💾 Setup .NET Workloads"
