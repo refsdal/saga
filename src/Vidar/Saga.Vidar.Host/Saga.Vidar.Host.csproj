@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsPublishable>true</IsPublishable>
+        <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+        <ContainerRepository>refsdal/saga-vidar</ContainerRepository>
+        <ContainerFamiliy>jammy-chiseled</ContainerFamiliy>
+        <PublishProfile>DefaultContainer</PublishProfile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ContainerLabel Include="org.opencontainers.image.title" Value="Vidar" />
+        <ContainerLabel Include="org.opencontainers.image.description" Value="The official image for the Saga application Vidar, the customer solution in the Saga platform" />
+        <ContainerLabel Include="org.opencontainers.image.source" Value="https://github.com/refsdal/saga" />
+        <ContainerLabel Include="org.opencontainers.image.authors" Value="Refsdal Technologies" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Saga.Vidar.Infrastructure\Saga.Vidar.Infrastructure.csproj" />
+      <ProjectReference Include="..\Saga.Vidar.Presentation\Saga.Vidar.Presentation.csproj" />
+    </ItemGroup>
+
+</Project>
