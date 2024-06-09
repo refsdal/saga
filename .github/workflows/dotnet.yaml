@@ -1,0 +1,49 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: "🏗 Build and test solution"
+    runs-on: ubuntu-latest
+    env: 
+      CONFIGURATION: Release
+
+    steps:
+      - name: "🛎️ Checkout repository"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "💾 Setup .NET SDK"
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: "💾 Setup .NET Workloads"
+        run: |
+          dotnet workload install aspire
+
+      - name: "💾 Install GitVersion"
+        uses: gittools/actions/gitversion/setup@v1.1.1
+        with:
+          versionSpec: '5.x'
+
+      - name: "🔍 Determine Version"
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v1.1.1
+        with:
+          useConfigFile: true
+
+      - name: "⬇ Restore dependencies"
+        run: dotnet restore
+
+      - name: "🏗 Build solution"
+        run: dotnet build --no-restore --configuration {{ env.CONFIGURATION }}
+
+      - name: "🧑‍🔬 Test solution"
+        run: dotnet test --no-build --verbosity normal --configuration {{ env.CONFIGURATION }}
